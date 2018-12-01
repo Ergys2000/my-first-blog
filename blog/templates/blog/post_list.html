@@ -4,7 +4,11 @@
 	<title></title>
 </head>
 <body>
-	<h1>Mirserdhe ne faqen e Ergys</h1>
-	<strong>Endi asht nji budall aq i madh</strong>
-</body>
+	{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </html>
